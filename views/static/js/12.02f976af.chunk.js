@@ -1,0 +1,2 @@
+(this.webpackJsonprooms=this.webpackJsonprooms||[]).push([[12],{137:function(t,n,s){"use strict";s.r(n),s.d(n,"default",(function(){return r}));s(0);var o=s(1);function r(){return Object(o.jsx)("div",{})}}}]);
+//# sourceMappingURL=12.02f976af.chunk.js.map

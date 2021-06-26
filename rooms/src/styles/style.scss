@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap');
+$secondary_blue: #34ef;
+$kind-of-gray: #d5d5d5;
+$light-gray: #b1b1b1;
+$background: #f3f3f3;
+@mixin positioning {
+    width: 60vw;
+    min-width: 45rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+@mixin buttonHover{
+    transition: 0.3s;
+    &:hover{
+        background: transparent;
+        color: $secondary_blue;
+    }
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: $background;
+    display: flex;
+    width: 100vw;
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    overflow: hidden;
+    user-select: none;
+    button, input, select, a, option{
+        font-family: 'Raleway', sans-serif;
+        color: black;
+        text-decoration: none;
+        transition: 0.3s;
+        &:focus{
+            outline: none;
+        }
+        &:placeholder-shown{
+            &:hover{
+                color: transparent;
+            }
+        }
+        &:hover{
+            transition: 0.3s;
+            &::placeholder{
+                color: transparent;
+            }
+        }
+    }
+ 
+    .menu{
+        border-top: 1px solid $light-gray;
+        height: 5rem;
+        padding: 1rem;
+        position: absolute;
+        width: 100vw;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        white-space: nowrap;
+        img{
+            width: 6rem;
+            height: 6rem;
+            position: absolute;
+            left: 0;
+            top: -1.2rem;
+        }
+           h1{
+                color: $secondary_blue;
+                font-size: 3rem;
+                position: absolute;
+                right: 1rem;
+           }
+        .buttons{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            button{
+                color: black;
+                font-weight: 800;
+                text-align: left;
+                margin-top: 1rem;
+                margin-left: 1rem;
+                font-size: 1.2rem;
+                border: none;
+                background: transparent;
+                transition: 0.3s;
+                &:hover{
+                    margin-top: 0.5rem;
+                }
+            }
+        }
+    }
+    .main-top{
+        width: 100vw;
+        display: flex;
+        margin-top:1.5rem;
+        input{
+            border: none;
+            height: 3rem;
+            font-size: 2rem;
+            font-weight: 800;
+            width: 16rem;
+            min-width: 15rem;
+            margin-left: 3rem;
+            background: transparent;
+            transition: 0.3s;
+            
+        }
+        label{
+            font-size: 2rem;
+            font-weight: 800;
+            animation: label-animate 1s infinite;
+        }
+        .right{
+            position: absolute;
+            right: 2rem;
+            button{
+                height: 3rem;
+                background: $secondary_blue;
+                border: none;
+                width: 15rem;
+                font-size: 1.5rem;
+                color: white;
+                @include buttonHover();
+            }
+        }
+        .line{
+            position: absolute;
+        }
+
+    }
+    .down{
+        position: absolute;
+        top: 7rem;
+        width: 100vw;
+       
+        .main-page{
+            @include positioning();
+            .existing{
+                
+                .rooms-list{
+                    tr{
+                        display: flex;
+                        width: 100%;
+                        width: 60vw;
+                        min-width: 45rem;
+                        // flex-flow: row no-wrap;
+                        
+                       
+                        th, td{
+                            width: 20%;
+                            justify-content: space-between;
+                            display: flex;
+                            height: 3rem;
+                            line-height: 3rem;
+                            overflow: hidden;
+                        }
+                        td{
+                            margin-left: 1rem;
+                        }
+                        button{
+                            margin-top: 0.5rem;
+                            height: 2rem;
+                            width: 5rem;
+                            border: none;
+                            background: $secondary_blue;
+                            color: white;
+                            font-weight: 300;
+                            @include buttonHover();
+                        }
+                    }
+                }
+            }
+        }
+        .room{
+            height: 78vh;
+            min-height: 28rem;
+            display: flex;
+            text-align: center;
+            ul, li{
+                text-decoration: none;
+                list-style: none;
+            }
+            @include positioning();
+            button{
+                border: none;
+                background: $secondary_blue;
+                color: white;
+                @include buttonHover();
+            }
+            .left{
+                width: 38vw;
+                display: flex;
+                text-align: left;
+                input{
+                    position: absolute;
+                    bottom: 1rem;
+                    border: none;
+                    height: 2.5rem;
+                    width: 38vw;
+                    min-width: 17rem;
+                }
+                .message-btn{
+                    position: absolute;
+                    bottom: 1rem;
+                    height: 2.5rem;
+                    right: 22vw;
+                    width: 5rem;
+                }
+                .chat-list{
+                    max-height: 65vh;
+                    overflow: hidden;
+                    overflow-y: scroll;
+                    position: absolute;
+                    bottom: 4.5rem;
+                    width: 30vw;
+                    min-width: 17rem;
+                    li{
+                        line-height: 2rem;
+                      font-size: 1.1rem;
+                        // height: 2rem;
+                        border-bottom: 1px solid rgb(201, 201, 201);
+                        margin-bottom: 0.3rem; 
+                        overflow: auto;
+                        overflow-wrap: break-word;
+                    }
+                }
+            }
+            .right{
+                text-align: left;
+                h1{
+                    position: absolute;
+                    right: 1rem;
+                }
+                h3{
+                    margin-top: 3rem;
+                    margin-right: 1rem;
+                }
+                li{
+                    // position: absolute;
+                    // right: 1rem;
+                    // top: 5.2rem;
+                    &:first-child{
+                        margin-top: 1.5rem;
+                    }
+                    margin-right: 1rem;
+                }
+                button{
+                    position: absolute;
+                    bottom: 1rem;
+                    right: 1rem;
+                    height: 2.5rem;
+                    width: 9rem;
+                }
+            }
+        }
+        .news{
+            @include positioning();
+            list-style: none;
+            p{
+                margin-left: 1rem; 
+            }
+            label{
+                position: absolute;
+                right: 0;
+            }
+        }
+        .loading{
+            @include positioning();
+            text-align: center;
+        label{
+            &:nth-child(n){
+                animation-delay: n + 0.5s;
+                animation-name: dots;
+                animation-fill-mode: forwards;   
+            }
+        }
+        }
+    }
+    .cre{
+        @include positioning();
+        transition: 0.3s;
+        label, input{
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+        input{
+            border: none;
+            height: 3rem;
+            background: rgb(248, 248, 248);
+            width: 45vw;
+            font-size: 1.2rem;
+        }
+        select{
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            border: none;
+            option{
+                font-weight: 300;
+            }
+            appearance: none;
+            background-image: url('./../images/sort-down-solid.svg');
+            background-repeat: no-repeat;
+            background-position: 80%center;
+            outline: none;
+            transition: 0.3s;
+            
+        }
+        button{
+            position: absolute;
+            right: 4rem;
+            top:17rem;
+            width: 8rem;
+            border: none;
+            color: white;
+            background: $secondary_blue;
+            height: 2.5rem;
+           @include buttonHover()
+        }
+    }
+    .transition-div{
+        width: 100vw;
+        height: 100vh;
+        z-index: 1000;
+        background: $secondary_blue;
+        position: fixed;
+        top: 0;
+        left: 0;
+        animation-name: transition;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    .small{
+        width: 100vw;
+        height: 100vh;
+        .menu-btn{
+            position: absolute;
+            right: 2rem;
+            top: 1rem;
+            font-size: 3rem;
+            font-weight: 800;
+            transform: rotate(90deg);
+        }
+        .m-down{
+            margin-top: 5rem;
+            text-align: center;
+           .main-page{
+           
+            input{
+                position: absolute;
+                height: 3.3rem;
+                left: 50%;
+                font-weight: 800;
+                font-size: 7.5vw;
+                transform: translateX(-50%);
+                width: 60%;
+                border: none;
+                background: transparent;
+                &::placeholder{
+                    text-align: center;
+                    color: black;
+                }
+            }
+            label{
+                position: absolute;
+                right: 18%;
+                font-size: 3rem;
+                font-weight: 800;
+                animation: label-animate 1s infinite;
+            }
+            p{
+                padding-top: 4rem;
+                padding-right: 10%;
+                padding-left: 10%;
+            }
+            .rooms-list{
+                padding-top: 2rem;
+                width: 100vw;
+                justify-content: space-between;
+                tr{
+                    width: 100vw;
+                    th, td{
+                        width: 24vw;
+                        line-height: 2rem;
+                        overflow: hidden;
+                    }
+                    th{
+                        font-weight: 800;
+                    }
+                    td{
+                        font-weight: 300;
+                    }
+                }
+                button{
+                    border: none;
+                    background: $secondary_blue;
+                    color: white;
+                    width: 18vw;
+                    height: 1.8rem;
+                    margin-top: 0.1rem;
+                }
+                
+            }
+            .create-m-main{
+                font-size: 2rem;
+                position: fixed;
+                bottom: 0;
+                background: $secondary_blue;
+                color: white;
+                font-weight: 800;
+                height: 4rem;
+                line-height: 4rem;
+                text-align: center;
+                width: 100vw;
+                transition: 0.3s;
+                &:hover{
+                    background: transparent;
+                    color: $secondary_blue;
+                }
+
+            }
+           }
+           .create{
+            font-size: 1.3rem;
+               h1{
+                   font-size: 2.5rem;
+               }
+               input,label, select{
+                   margin-top: 2rem;
+               }
+               input[type="text"]{
+                   border: none;
+                   height: 2.5rem;
+                   min-width: 12rem;
+                   width: 50vw;
+                   font-size: 1.3rem;
+               }
+               select{
+                border: none;
+                option{
+                    font-weight: 300;
+                }
+                appearance: none;
+                background-image: url('./../images/sort-down-solid.svg');
+                background-repeat: no-repeat;
+                background-position: 80%center;
+                outline: none;
+                transition: 0.3s;
+               }
+               button{
+                   position: absolute;
+                   right: 2rem;
+                //    bottom: 14rem;
+                   min-width: 8rem;
+                   width: 25vw;
+                   height: 2.5rem;
+                   font-size: 1.3rem;
+                   color: white;
+                   border: none;
+                   background: $secondary_blue;
+                   @include buttonHover();
+               }
+           }
+           .m-room{
+               background: pink;
+               position: absolute;
+               top: 10rem;
+           }
+        }
+    }
+
+    .m-menu{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        button, a{
+            border: none;
+            background: transparent;
+            white-space: nowrap;
+            color: white;
+            font-weight: 800;
+            width: 100vw;
+            font-size: 1rem;
+            line-height: 3.5rem;
+            transition: 0.5s;
+            &:hover{
+                font-size: 4rem;
+            }
+        }
+        
+    }
+
+    @keyframes label-animate {
+        0%{ opacity: 1; }
+        0%{ opacity: 0; }
+    }
+    @keyframes animatep{
+        0%{ color: pink }
+        100%{color: red}
+    }
+    @keyframes transition{
+        0%{ left: 100vw }
+        100%{left: -100vw;}
+    }
+    @keyframes dots{
+        0%{ opacity: 0; }
+        100%{opacity: 1;}
+    }
+    
+}
+.pop-menu{
+    animation-name: anima;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+.pop-test{
+    animation-name: anima-two;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+@keyframes anima{
+    0%{ left: 100vw }
+    100%{left: 0vw}
+}
+@keyframes anima-two{
+    0%{ left: 0vw }
+    100%{left: 100vw}
+}
+@import './mainPage.scss'

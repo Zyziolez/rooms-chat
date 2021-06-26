@@ -1,0 +1,1 @@
+{"version":3,"sources":["mobile/MAdmin.js"],"names":["MAdmin"],"mappings":"iGAAA,+DAEe,SAASA,IACpB,OACI","file":"static/js/12.02f976af.chunk.js","sourcesContent":["import React from 'react'\n\nexport default function MAdmin() {\n    return (\n        <div>\n            \n        </div>\n    )\n}\n"],"sourceRoot":""}

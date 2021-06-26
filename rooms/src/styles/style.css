@@ -1,0 +1,782 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #f3f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  overflow: hidden;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+body button, body input, body select, body a, body option {
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  text-decoration: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body button:focus, body input:focus, body select:focus, body a:focus, body option:focus {
+  outline: none;
+}
+
+body button:placeholder-shown:hover, body input:placeholder-shown:hover, body select:placeholder-shown:hover, body a:placeholder-shown:hover, body option:placeholder-shown:hover {
+  color: transparent;
+}
+
+body button:hover, body input:hover, body select:hover, body a:hover, body option:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body button:hover::-webkit-input-placeholder, body input:hover::-webkit-input-placeholder, body select:hover::-webkit-input-placeholder, body a:hover::-webkit-input-placeholder, body option:hover::-webkit-input-placeholder {
+  color: transparent;
+}
+
+body button:hover:-ms-input-placeholder, body input:hover:-ms-input-placeholder, body select:hover:-ms-input-placeholder, body a:hover:-ms-input-placeholder, body option:hover:-ms-input-placeholder {
+  color: transparent;
+}
+
+body button:hover::-ms-input-placeholder, body input:hover::-ms-input-placeholder, body select:hover::-ms-input-placeholder, body a:hover::-ms-input-placeholder, body option:hover::-ms-input-placeholder {
+  color: transparent;
+}
+
+body button:hover::placeholder, body input:hover::placeholder, body select:hover::placeholder, body a:hover::placeholder, body option:hover::placeholder {
+  color: transparent;
+}
+
+body .menu {
+  border-top: 1px solid #b1b1b1;
+  height: 5rem;
+  padding: 1rem;
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  white-space: nowrap;
+}
+
+body .menu img {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  left: 0;
+  top: -1.2rem;
+}
+
+body .menu h1 {
+  color: #34ef;
+  font-size: 3rem;
+  position: absolute;
+  right: 1rem;
+}
+
+body .menu .buttons {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .menu .buttons button {
+  color: black;
+  font-weight: 800;
+  text-align: left;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  background: transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .menu .buttons button:hover {
+  margin-top: 0.5rem;
+}
+
+body .main-top {
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+body .main-top input {
+  border: none;
+  height: 3rem;
+  font-size: 2rem;
+  font-weight: 800;
+  width: 16rem;
+  min-width: 15rem;
+  margin-left: 3rem;
+  background: transparent;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .main-top label {
+  font-size: 2rem;
+  font-weight: 800;
+  -webkit-animation: label-animate 1s infinite;
+          animation: label-animate 1s infinite;
+}
+
+body .main-top .right {
+  position: absolute;
+  right: 2rem;
+}
+
+body .main-top .right button {
+  height: 3rem;
+  background: #34ef;
+  border: none;
+  width: 15rem;
+  font-size: 1.5rem;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .main-top .right button:hover {
+  background: transparent;
+  color: #34ef;
+}
+
+body .main-top .line {
+  position: absolute;
+}
+
+body .down {
+  position: absolute;
+  top: 7rem;
+  width: 100vw;
+}
+
+body .down .main-page {
+  width: 60vw;
+  min-width: 45rem;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+body .down .main-page .existing .rooms-list tr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  width: 60vw;
+  min-width: 45rem;
+}
+
+body .down .main-page .existing .rooms-list tr th, body .down .main-page .existing .rooms-list tr td {
+  width: 20%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3rem;
+  line-height: 3rem;
+  overflow: hidden;
+}
+
+body .down .main-page .existing .rooms-list tr td {
+  margin-left: 1rem;
+}
+
+body .down .main-page .existing .rooms-list tr button {
+  margin-top: 0.5rem;
+  height: 2rem;
+  width: 5rem;
+  border: none;
+  background: #34ef;
+  color: white;
+  font-weight: 300;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .down .main-page .existing .rooms-list tr button:hover {
+  background: transparent;
+  color: #34ef;
+}
+
+body .down .room {
+  height: 78vh;
+  min-height: 28rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  width: 60vw;
+  min-width: 45rem;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+body .down .room ul, body .down .room li {
+  text-decoration: none;
+  list-style: none;
+}
+
+body .down .room button {
+  border: none;
+  background: #34ef;
+  color: white;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .down .room button:hover {
+  background: transparent;
+  color: #34ef;
+}
+
+body .down .room .left {
+  width: 38vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+body .down .room .left input {
+  position: absolute;
+  bottom: 1rem;
+  border: none;
+  height: 2.5rem;
+  width: 38vw;
+  min-width: 17rem;
+}
+
+body .down .room .left .message-btn {
+  position: absolute;
+  bottom: 1rem;
+  height: 2.5rem;
+  right: 22vw;
+  width: 5rem;
+}
+
+body .down .room .left .chat-list {
+  max-height: 65vh;
+  overflow: hidden;
+  overflow-y: scroll;
+  position: absolute;
+  bottom: 4.5rem;
+  width: 30vw;
+  min-width: 17rem;
+}
+
+body .down .room .left .chat-list li {
+  line-height: 2rem;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #c9c9c9;
+  margin-bottom: 0.3rem;
+  overflow: auto;
+  overflow-wrap: break-word;
+}
+
+body .down .room .right {
+  text-align: left;
+}
+
+body .down .room .right h1 {
+  position: absolute;
+  right: 1rem;
+}
+
+body .down .room .right h3 {
+  margin-top: 3rem;
+  margin-right: 1rem;
+}
+
+body .down .room .right li {
+  margin-right: 1rem;
+}
+
+body .down .room .right li:first-child {
+  margin-top: 1.5rem;
+}
+
+body .down .room .right button {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  height: 2.5rem;
+  width: 9rem;
+}
+
+body .down .news {
+  width: 60vw;
+  min-width: 45rem;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  list-style: none;
+}
+
+body .down .news p {
+  margin-left: 1rem;
+}
+
+body .down .news label {
+  position: absolute;
+  right: 0;
+}
+
+body .down .loading {
+  width: 60vw;
+  min-width: 45rem;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-align: center;
+}
+
+body .down .loading label:nth-child(n) {
+  -webkit-animation-delay: n0.5s;
+          animation-delay: n0.5s;
+  -webkit-animation-name: dots;
+          animation-name: dots;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+body .cre {
+  width: 60vw;
+  min-width: 45rem;
+  margin-left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .cre label, body .cre input {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+body .cre input {
+  border: none;
+  height: 3rem;
+  background: #f8f8f8;
+  width: 45vw;
+  font-size: 1.2rem;
+}
+
+body .cre select {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("./../images/sort-down-solid.svg");
+  background-repeat: no-repeat;
+  background-position: 80%center;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .cre select option {
+  font-weight: 300;
+}
+
+body .cre button {
+  position: absolute;
+  right: 4rem;
+  top: 17rem;
+  width: 8rem;
+  border: none;
+  color: white;
+  background: #34ef;
+  height: 2.5rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .cre button:hover {
+  background: transparent;
+  color: #34ef;
+}
+
+body .transition-div {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  background: #34ef;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-animation-name: transition;
+          animation-name: transition;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+body .small {
+  width: 100vw;
+  height: 100vh;
+}
+
+body .small .menu-btn {
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  font-size: 3rem;
+  font-weight: 800;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+body .small .m-down {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+body .small .m-down .main-page input {
+  position: absolute;
+  height: 3.3rem;
+  left: 50%;
+  font-weight: 800;
+  font-size: 7.5vw;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 60%;
+  border: none;
+  background: transparent;
+}
+
+body .small .m-down .main-page input::-webkit-input-placeholder {
+  text-align: center;
+  color: black;
+}
+
+body .small .m-down .main-page input:-ms-input-placeholder {
+  text-align: center;
+  color: black;
+}
+
+body .small .m-down .main-page input::-ms-input-placeholder {
+  text-align: center;
+  color: black;
+}
+
+body .small .m-down .main-page input::placeholder {
+  text-align: center;
+  color: black;
+}
+
+body .small .m-down .main-page label {
+  position: absolute;
+  right: 18%;
+  font-size: 3rem;
+  font-weight: 800;
+  -webkit-animation: label-animate 1s infinite;
+          animation: label-animate 1s infinite;
+}
+
+body .small .m-down .main-page p {
+  padding-top: 4rem;
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+body .small .m-down .main-page .rooms-list {
+  padding-top: 2rem;
+  width: 100vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .small .m-down .main-page .rooms-list tr {
+  width: 100vw;
+}
+
+body .small .m-down .main-page .rooms-list tr th, body .small .m-down .main-page .rooms-list tr td {
+  width: 24vw;
+  line-height: 2rem;
+  overflow: hidden;
+}
+
+body .small .m-down .main-page .rooms-list tr th {
+  font-weight: 800;
+}
+
+body .small .m-down .main-page .rooms-list tr td {
+  font-weight: 300;
+}
+
+body .small .m-down .main-page .rooms-list button {
+  border: none;
+  background: #34ef;
+  color: white;
+  width: 18vw;
+  height: 1.8rem;
+  margin-top: 0.1rem;
+}
+
+body .small .m-down .main-page .create-m-main {
+  font-size: 2rem;
+  position: fixed;
+  bottom: 0;
+  background: #34ef;
+  color: white;
+  font-weight: 800;
+  height: 4rem;
+  line-height: 4rem;
+  text-align: center;
+  width: 100vw;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .small .m-down .main-page .create-m-main:hover {
+  background: transparent;
+  color: #34ef;
+}
+
+body .small .m-down .create {
+  font-size: 1.3rem;
+}
+
+body .small .m-down .create h1 {
+  font-size: 2.5rem;
+}
+
+body .small .m-down .create input, body .small .m-down .create label, body .small .m-down .create select {
+  margin-top: 2rem;
+}
+
+body .small .m-down .create input[type="text"] {
+  border: none;
+  height: 2.5rem;
+  min-width: 12rem;
+  width: 50vw;
+  font-size: 1.3rem;
+}
+
+body .small .m-down .create select {
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url("./../images/sort-down-solid.svg");
+  background-repeat: no-repeat;
+  background-position: 80%center;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .small .m-down .create select option {
+  font-weight: 300;
+}
+
+body .small .m-down .create button {
+  position: absolute;
+  right: 2rem;
+  min-width: 8rem;
+  width: 25vw;
+  height: 2.5rem;
+  font-size: 1.3rem;
+  color: white;
+  border: none;
+  background: #34ef;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body .small .m-down .create button:hover {
+  background: transparent;
+  color: #34ef;
+}
+
+body .small .m-down .m-room {
+  background: pink;
+  position: absolute;
+  top: 10rem;
+}
+
+body .m-menu {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+body .m-menu button, body .m-menu a {
+  border: none;
+  background: transparent;
+  white-space: nowrap;
+  color: white;
+  font-weight: 800;
+  width: 100vw;
+  font-size: 1rem;
+  line-height: 3.5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+body .m-menu button:hover, body .m-menu a:hover {
+  font-size: 4rem;
+}
+
+@-webkit-keyframes label-animate {
+  0% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+
+@keyframes label-animate {
+  0% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes animatep {
+  0% {
+    color: pink;
+  }
+  100% {
+    color: red;
+  }
+}
+
+@keyframes animatep {
+  0% {
+    color: pink;
+  }
+  100% {
+    color: red;
+  }
+}
+
+@-webkit-keyframes transition {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+
+@keyframes transition {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: -100vw;
+  }
+}
+
+@-webkit-keyframes dots {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes dots {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.pop-menu {
+  -webkit-animation-name: anima;
+          animation-name: anima;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.pop-test {
+  -webkit-animation-name: anima-two;
+          animation-name: anima-two;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+@-webkit-keyframes anima {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+
+@keyframes anima {
+  0% {
+    left: 100vw;
+  }
+  100% {
+    left: 0vw;
+  }
+}
+
+@-webkit-keyframes anima-two {
+  0% {
+    left: 0vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+
+@keyframes anima-two {
+  0% {
+    left: 0vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */

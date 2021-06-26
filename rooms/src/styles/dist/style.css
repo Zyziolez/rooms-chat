@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f3f3;
+  display: flex;
+  width: 100vw;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  overflow: hidden;
+}
+body button, body input, body select, body a {
+  font-family: "Raleway", sans-serif;
+  color: black;
+  text-decoration: none;
+}
+body .menu {
+  border-top: 1px solid #b1b1b1;
+  height: 5rem;
+  padding: 1rem;
+  position: absolute;
+  width: 100vw;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  white-space: nowrap;
+}
+body .menu img {
+  width: 6rem;
+  height: 6rem;
+  position: absolute;
+  left: 0;
+  top: -1.2rem;
+}
+body .menu h1 {
+  color: #34ef;
+  font-size: 3rem;
+  position: absolute;
+  right: 1rem;
+}
+body .menu .buttons {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+}
+body .menu .buttons button {
+  color: black;
+  font-weight: 800;
+  text-align: left;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  font-size: 1.2rem;
+  border: none;
+  background: transparent;
+  transition: 0.3s;
+}
+body .menu .buttons button:hover {
+  margin-top: 0.5rem;
+}
+body .main-top {
+  width: 100vw;
+  display: flex;
+  margin-top: 1.5rem;
+}
+body .main-top input {
+  border: none;
+  height: 3rem;
+  font-size: 2rem;
+  font-weight: 800;
+  width: 16rem;
+  min-width: 15rem;
+  margin-left: 3rem;
+  background: transparent;
+  transition: 0.3s;
+}
+body .main-top input:hover {
+  transition: 0.3s;
+}
+body .main-top input:placeholder-shown {
+  color: black;
+}
+body .main-top input:placeholder-shown:hover {
+  color: transparent;
+}
+body .main-top label {
+  font-size: 2rem;
+  font-weight: 800;
+  animation: label-animate 1s infinite;
+}
+body .main-top .right {
+  position: absolute;
+  right: 2rem;
+}
+body .main-top .right button {
+  height: 3rem;
+  background: #34ef;
+  border: none;
+  width: 15rem;
+  font-size: 1.5rem;
+  color: white;
+  transition: 0.3s;
+}
+body .main-top .right button:hover {
+  background: transparent;
+  color: #34ef;
+}
+body .main-top .line {
+  position: absolute;
+}
+body .down {
+  position: absolute;
+  top: 7rem;
+  width: 100vw;
+}
+body .down .main-page {
+  width: 60vw;
+  min-width: 45rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+body .down .main-page .existing .rooms-list tr {
+  display: flex;
+  width: 100%;
+  width: 60vw;
+  min-width: 45rem;
+}
+body .down .main-page .existing .rooms-list tr th, body .down .main-page .existing .rooms-list tr td {
+  width: 20%;
+  justify-content: space-between;
+  display: flex;
+  height: 3rem;
+  line-height: 3rem;
+  overflow: hidden;
+}
+body .down .main-page .existing .rooms-list tr td {
+  margin-left: 1rem;
+}
+body .down .main-page .existing .rooms-list tr button {
+  margin-top: 0.5rem;
+  height: 2rem;
+  width: 5rem;
+  border: none;
+  background: #34ef;
+  color: white;
+  font-weight: 800;
+}
+body .cre {
+  width: 60vw;
+  min-width: 45rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background: yellowgreen;
+}
+body .cre label, body .cre input {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+body .cre input {
+  border: none;
+  height: 3rem;
+  background: #f8f8f8;
+  width: 45vw;
+  font-size: 1.2rem;
+}
+body .cre select {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+body .cre button {
+  position: absolute;
+  right: 4rem;
+  top: 17rem;
+  width: 8rem;
+  border: none;
+  color: white;
+  background: #34ef;
+  height: 2.5rem;
+}
+@keyframes label-animate {
+  0% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+@keyframes animatep {
+  0% {
+    color: pink;
+  }
+  100% {
+    color: red;
+  }
+}
